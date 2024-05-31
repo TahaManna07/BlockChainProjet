@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blockchain</title>
+</head>
+<body>
+<h1>Blockchain</h1>
+<form action="/addBlock" method="post">
+    <input type="text" name="data" placeholder="Block data" required>
+    <button type="submit">Add Block</button>
+</form>
+<h2>Blocks</h2>
+<h2>Blocks</h2>
+
+<ul>
+    <li th:each="block : ${blocks}">
+        <a th:href="@{/block/{index}(index=${block.index})}">Block [[${block.index}]]</a>
+    </li>
+</ul>
+</body>
+</html>

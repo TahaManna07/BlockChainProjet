@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Bloc</title>
+</head>
+<body>
+<h2>Ajouter un Bloc</h2>
+<form th:action="@{/blockchain/addBlockForm}" th:object="${block}" method="post">
+    <label for="index">Index:</label><br>
+    <input type="number" id="index" th:field="*{index}" required><br>
+    <label for="data">Données:</label><br>
+    <input type="text" id="data" th:field="*{data}" required><br>
+    <label for="previousHash">Hash précédent:</label><br>
+    <input type="text" id="previousHash" th:field="*{previousHash}" required><br>
+    <button type="submit">Ajouter Bloc</button>
+</form>
+</body>
+</html>

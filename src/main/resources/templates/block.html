@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Block Details</title>
+</head>
+<body>
+<h1>Block Details</h1>
+<p><strong>Index:</strong> <span th:text="${block.index}"></span></p>
+<p><strong>Timestamp:</strong> <span th:text="${block.timestamp}"></span></p>
+<p><strong>Previous Hash:</strong> <span th:text="${block.previousHash}"></span></p>
+<p><strong>Hash:</strong> <span th:text="${block.hash}"></span></p>
+<p><strong>Data:</strong> <span th:text="${block.data}"></span></p>
+<a href="/">Back to Blockchain</a>
+</body>
+</html>

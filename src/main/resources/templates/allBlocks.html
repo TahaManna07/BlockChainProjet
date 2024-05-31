@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blocks</title>
+</head>
+<body>
+<h1>All Blocks</h1>
+<ul>
+    <li th:each="block : ${blocks}">
+        <p><strong>Index:</strong> <span th:text="${block.index}"></span></p>
+        <p><strong>Timestamp:</strong> <span th:text="${block.timestamp}"></span></p>
+        <p><strong>Previous Hash:</strong> <span th:text="${block.previousHash}"></span></p>
+        <p><strong>Hash:</strong> <span th:text="${block.hash}"></span></p>
+        <p><strong>Data:</strong> <span th:text="${block.data}"></span></p>
+    </li>
+</ul>
+<a href="/blockchain/addBlockForm">Ajouter un autre bloc</a>
+</body>
+</html>
